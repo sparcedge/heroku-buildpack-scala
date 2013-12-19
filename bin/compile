@@ -39,7 +39,7 @@ echo "done"
 
 # Download node v0.10.23 from Heroku's S3 mirror of nodejs.org/dist
 node_version="0.10.23"
-echo -n "-----> Downloading and installing node v$node_version"
+echo "-----> Downloading and installing node v$node_version"
 node_url="http://s3pository.heroku.com/node/v$node_version/node-v$node_version-linux-x64.tar.gz"
 curl $node_url -s -o - | tar xzf - -C $BUILD_DIR
 
@@ -62,7 +62,7 @@ SBT_BINDIR="$SBT_USER_HOME"/bin
 # chdir as sbt expects
 cd $BUILD_DIR
 
-echo -n "-----> Installing RequireJS"
+echo "-----> Installing RequireJS"
 npm install -g requirejs
 
 # unpack cache
