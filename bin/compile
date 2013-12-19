@@ -170,5 +170,8 @@ if is_play $BUILD_DIR ; then
   fi
 fi
 
+echo "-----> Dropping vender (node) dir from the slug"
+rm -rf $BUILD_DIR/vendor
+
 # Move compiled app back to where Heroku expects it
 mv $BUILD_DIR $APP_BUILD_DIR
